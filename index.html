@@ -37,20 +37,23 @@
     <link href="htts://vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
     <script src="htts://vjs.zencdn.net/5.19/video.min.js"></script>
 <!-- <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5d27f28e35a1b20012696b81&product=inline-share-buttons" sticky-share-buttons></script> -->
-
-
-
-
-
     <style>
         @-ms-viewport { width:device-width; }
         @media only screen and (min-device-width:800px) { html { overflow:hidden; } }
         html { height:100%; }
         body { height:100%; overflow:hidden; margin:0; padding:0; font-family:microsoft yahei, Helvetica, sans-serif;  background-color:#000000; }
     </style>
+		<script>
+	$.getJSON("https://api.ipify.org?format=json", function(data) {
+      if (data.ip != '114.32.122.221')
+	  {
+	    console.log("不准許的IP.");
+		$("body").html("<p style='color:#ffffff'>不准許的IP.</p>");
+	  }
+    })
+	</script>
 </head>
 <body>
-
     <div id="fullscreenid" style="position:relative;width:100%; height:100%;">
         <div id="panoBtns" style="display:none">
             <div class="vrshow_container_logo">
